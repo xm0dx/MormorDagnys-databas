@@ -19,3 +19,16 @@ CREATE TABLE suppliers(
     postalcode_id INTEGER NOT NULL,
     CONSTRAINT fk_postalcode FOREIGN KEY(postalcode_id) REFERENCES postalcodes(id)
 );
+
+-- råvaror, varje råvara köps från en leverantör
+CREATE TABLE ingredients(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    itemnumber VARCHAR(15) NOT NULL UNIQUE,
+    ingredientname VARCHAR(80) NOT NULL,
+    priceperkg FLOAT NOT NULL,
+    -- stock är hur många kg som finns kvar, minstock är när det är dags att beställa
+    stock FLOAT NOT NULL DEFAULT 0,
+    minstock FLOAT NOT NULL DEFAULT 0,
+    supplier_id INTEGER NOT NULL,
+    CONSTRAINT fk_supplier FOREIGN KEY(supplier_id) REFERENCES suppliers(id)
+);
