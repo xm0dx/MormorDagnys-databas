@@ -32,3 +32,17 @@ CREATE TABLE ingredients(
     supplier_id INTEGER NOT NULL,
     CONSTRAINT fk_supplier FOREIGN KEY(supplier_id) REFERENCES suppliers(id)
 );
+
+-- bröd, bullar och konditori
+CREATE TABLE categories(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    categoryname VARCHAR(40) NOT NULL UNIQUE
+);
+
+CREATE TABLE products(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    productname VARCHAR(80) NOT NULL UNIQUE,
+    price FLOAT NOT NULL,
+    category_id INTEGER NOT NULL,
+    CONSTRAINT fk_category FOREIGN KEY(category_id) REFERENCES categories(id)
+);
