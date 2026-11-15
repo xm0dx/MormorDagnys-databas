@@ -46,3 +46,14 @@ CREATE TABLE products(
     category_id INTEGER NOT NULL,
     CONSTRAINT fk_category FOREIGN KEY(category_id) REFERENCES categories(id)
 );
+
+-- receptet för en produkt, en rad per råvara
+-- primärnyckeln är produkt + råvara så samma råvara kan bara finnas en gång i ett recept
+CREATE TABLE recipes(
+    product_id INTEGER NOT NULL,
+    ingredient_id INTEGER NOT NULL,
+    amount FLOAT NOT NULL,
+    CONSTRAINT pk_recipes PRIMARY KEY(product_id, ingredient_id),
+    CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES products(id),
+    CONSTRAINT fk_ingredient FOREIGN KEY(ingredient_id) REFERENCES ingredients(id)
+);
