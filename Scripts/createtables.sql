@@ -57,3 +57,23 @@ CREATE TABLE recipes(
     CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES products(id),
     CONSTRAINT fk_ingredient FOREIGN KEY(ingredient_id) REFERENCES ingredients(id)
 );
+
+-- inköp från en leverantör, raderna ligger i purchaseitems
+CREATE TABLE purchases(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    purchasenumber VARCHAR(15) NOT NULL UNIQUE,
+    purchasedate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    supplier_id INTEGER NOT NULL,
+    CONSTRAINT fk_supplier FOREIGN KEY(supplier_id) REFERENCES suppliers(id)
+);
+
+CREATE TABLE purchaseitems(
+    purchase_id INTEGER NOT NULL,
+    ingredient_id INTEGER NOT NULL,
+    quantity FLOAT NOT NULL,
+    -- priset sparas på raden eftersom kilopriset kan ändras senare
+    priceperkg FLOAT NOT NULL,
+    CONSTRAINT pk_purchaseitems PRIMARY KEY(purchase_id, ingredient_id),
+    CONSTRAINT fk_purchase FOREIGN KEY(purchase_id) REFERENCES purchases(id),
+    CONSTRAINT fk_ingredient FOREIGN KEY(ingredient_id) REFERENCES ingredients(id)
+);
