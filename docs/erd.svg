@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="470" viewBox="0 0 1640 470" font-family="Arial, Helvetica, sans-serif" font-size="12">
+<rect width="1640" height="470" fill="white"/>
+<text x="40" y="36" font-size="18" font-weight="bold">ERD Mormor Dagnys bageri (SQLite)</text>
+<line x1="370" y1="107.0" x2="270" y2="107.0" stroke="#333" stroke-width="1.2"/>
+<circle cx="270" cy="107.0" r="3.5" fill="#333"/>
+<text x="320.0" y="89.0" text-anchor="middle" font-size="10" fill="#333">Postalcodes</text>
+<text x="320.0" y="101.0" text-anchor="middle" font-size="10" fill="#333">has suppliers</text>
+<line x1="700" y1="151.0" x2="600" y2="151.0" stroke="#333" stroke-width="1.2"/>
+<circle cx="600" cy="151.0" r="3.5" fill="#333"/>
+<text x="650.0" y="133.0" text-anchor="middle" font-size="10" fill="#333">Suppliers</text>
+<text x="650.0" y="145.0" text-anchor="middle" font-size="10" fill="#333">has ingredients</text>
+<line x1="1030" y1="107.0" x2="930" y2="107.0" stroke="#333" stroke-width="1.2"/>
+<circle cx="930" cy="107.0" r="3.5" fill="#333"/>
+<text x="980.0" y="89.0" text-anchor="middle" font-size="10" fill="#333">Ingredients</text>
+<text x="980.0" y="101.0" text-anchor="middle" font-size="10" fill="#333">in recipes</text>
+<line x1="1145.0" y1="154" x2="1145.0" y2="330" stroke="#333" stroke-width="1.2"/>
+<circle cx="1145.0" cy="330" r="3.5" fill="#333"/>
+<text x="1145.0" y="236.0" text-anchor="middle" font-size="11" fill="#333" style="paint-order:stroke" stroke="white" stroke-width="4">Products has recipes</text>
+<line x1="485.0" y1="330" x2="485.0" y2="242" stroke="#333" stroke-width="1.2"/>
+<circle cx="485.0" cy="242" r="3.5" fill="#333"/>
+<text x="485.0" y="280.0" text-anchor="middle" font-size="11" fill="#333" style="paint-order:stroke" stroke="white" stroke-width="4">Suppliers has purchases</text>
+<line x1="700" y1="388.0" x2="600" y2="388.0" stroke="#333" stroke-width="1.2"/>
+<circle cx="600" cy="388.0" r="3.5" fill="#333"/>
+<text x="650.0" y="370.0" text-anchor="middle" font-size="10" fill="#333">Purchases</text>
+<text x="650.0" y="382.0" text-anchor="middle" font-size="10" fill="#333">has items</text>
+<line x1="815.0" y1="330" x2="815.0" y2="242" stroke="#333" stroke-width="1.2"/>
+<circle cx="815.0" cy="242" r="3.5" fill="#333"/>
+<text x="815.0" y="280.0" text-anchor="middle" font-size="11" fill="#333" style="paint-order:stroke" stroke="white" stroke-width="4">Ingredients in purchases</text>
+<line x1="1260" y1="366.0" x2="1360" y2="366.0" stroke="#333" stroke-width="1.2"/>
+<circle cx="1360" cy="366.0" r="3.5" fill="#333"/>
+<text x="1310.0" y="348.0" text-anchor="middle" font-size="10" fill="#333">Categories</text>
+<text x="1310.0" y="360.0" text-anchor="middle" font-size="10" fill="#333">has products</text>
+<rect x="40" y="60" width="230" height="94" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="40" y="60" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="155.0" y="79" text-anchor="middle" font-weight="bold" font-size="13">postalcodes</text>
+<text x="46" y="103" font-weight="bold" font-size="10">PK</text>
+<text x="92" y="103">id</text>
+<text x="264" y="103" text-anchor="end" fill="#555">INTEGER</text>
+<text x="46" y="125" font-weight="bold" font-size="10">U</text>
+<text x="92" y="125">postalcode</text>
+<text x="264" y="125" text-anchor="end" fill="#555">CHAR(5)</text>
+<text x="46" y="147" font-weight="bold" font-size="10"></text>
+<text x="92" y="147">city</text>
+<text x="264" y="147" text-anchor="end" fill="#555">VARCHAR(40)</text>
+<rect x="370" y="60" width="230" height="182" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="370" y="60" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="485.0" y="79" text-anchor="middle" font-weight="bold" font-size="13">suppliers</text>
+<text x="376" y="103" font-weight="bold" font-size="10">PK</text>
+<text x="422" y="103">id</text>
+<text x="594" y="103" text-anchor="end" fill="#555">INTEGER</text>
+<text x="376" y="125" font-weight="bold" font-size="10">U</text>
+<text x="422" y="125">suppliername</text>
+<text x="594" y="125" text-anchor="end" fill="#555">VARCHAR(80)</text>
+<text x="376" y="147" font-weight="bold" font-size="10"></text>
+<text x="422" y="147">contactperson</text>
+<text x="594" y="147" text-anchor="end" fill="#555">VARCHAR(60)</text>
+<text x="376" y="169" font-weight="bold" font-size="10"></text>
+<text x="422" y="169">phone</text>
+<text x="594" y="169" text-anchor="end" fill="#555">VARCHAR(15)</text>
+<text x="376" y="191" font-weight="bold" font-size="10">U</text>
+<text x="422" y="191">email</text>
+<text x="594" y="191" text-anchor="end" fill="#555">VARCHAR(128)</text>
+<text x="376" y="213" font-weight="bold" font-size="10"></text>
+<text x="422" y="213">addressline</text>
+<text x="594" y="213" text-anchor="end" fill="#555">VARCHAR(60)</text>
+<text x="376" y="235" font-weight="bold" font-size="10">FK</text>
+<text x="422" y="235">postalcode_id</text>
+<text x="594" y="235" text-anchor="end" fill="#555">INTEGER</text>
+<rect x="700" y="60" width="230" height="182" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="700" y="60" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="815.0" y="79" text-anchor="middle" font-weight="bold" font-size="13">ingredients</text>
+<text x="706" y="103" font-weight="bold" font-size="10">PK</text>
+<text x="752" y="103">id</text>
+<text x="924" y="103" text-anchor="end" fill="#555">INTEGER</text>
+<text x="706" y="125" font-weight="bold" font-size="10">U</text>
+<text x="752" y="125">itemnumber</text>
+<text x="924" y="125" text-anchor="end" fill="#555">VARCHAR(15)</text>
+<text x="706" y="147" font-weight="bold" font-size="10"></text>
+<text x="752" y="147">ingredientname</text>
+<text x="924" y="147" text-anchor="end" fill="#555">VARCHAR(80)</text>
+<text x="706" y="169" font-weight="bold" font-size="10"></text>
+<text x="752" y="169">priceperkg</text>
+<text x="924" y="169" text-anchor="end" fill="#555">FLOAT</text>
+<text x="706" y="191" font-weight="bold" font-size="10"></text>
+<text x="752" y="191">stock</text>
+<text x="924" y="191" text-anchor="end" fill="#555">FLOAT</text>
+<text x="706" y="213" font-weight="bold" font-size="10"></text>
+<text x="752" y="213">minstock</text>
+<text x="924" y="213" text-anchor="end" fill="#555">FLOAT</text>
+<text x="706" y="235" font-weight="bold" font-size="10">FK</text>
+<text x="752" y="235">supplier_id</text>
+<text x="924" y="235" text-anchor="end" fill="#555">INTEGER</text>
+<rect x="1030" y="60" width="230" height="94" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="1030" y="60" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="1145.0" y="79" text-anchor="middle" font-weight="bold" font-size="13">recipes</text>
+<text x="1036" y="103" font-weight="bold" font-size="10">PK,FK</text>
+<text x="1082" y="103">product_id</text>
+<text x="1254" y="103" text-anchor="end" fill="#555">INTEGER</text>
+<text x="1036" y="125" font-weight="bold" font-size="10">PK,FK</text>
+<text x="1082" y="125">ingredient_id</text>
+<text x="1254" y="125" text-anchor="end" fill="#555">INTEGER</text>
+<text x="1036" y="147" font-weight="bold" font-size="10"></text>
+<text x="1082" y="147">amount</text>
+<text x="1254" y="147" text-anchor="end" fill="#555">FLOAT</text>
+<rect x="370" y="330" width="230" height="116" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="370" y="330" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="485.0" y="349" text-anchor="middle" font-weight="bold" font-size="13">purchases</text>
+<text x="376" y="373" font-weight="bold" font-size="10">PK</text>
+<text x="422" y="373">id</text>
+<text x="594" y="373" text-anchor="end" fill="#555">INTEGER</text>
+<text x="376" y="395" font-weight="bold" font-size="10">U</text>
+<text x="422" y="395">purchasenumber</text>
+<text x="594" y="395" text-anchor="end" fill="#555">VARCHAR(15)</text>
+<text x="376" y="417" font-weight="bold" font-size="10"></text>
+<text x="422" y="417">purchasedate</text>
+<text x="594" y="417" text-anchor="end" fill="#555">TIMESTAMP</text>
+<text x="376" y="439" font-weight="bold" font-size="10">FK</text>
+<text x="422" y="439">supplier_id</text>
+<text x="594" y="439" text-anchor="end" fill="#555">INTEGER</text>
+<rect x="700" y="330" width="230" height="116" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="700" y="330" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="815.0" y="349" text-anchor="middle" font-weight="bold" font-size="13">purchaseitems</text>
+<text x="706" y="373" font-weight="bold" font-size="10">PK,FK</text>
+<text x="752" y="373">purchase_id</text>
+<text x="924" y="373" text-anchor="end" fill="#555">INTEGER</text>
+<text x="706" y="395" font-weight="bold" font-size="10">PK,FK</text>
+<text x="752" y="395">ingredient_id</text>
+<text x="924" y="395" text-anchor="end" fill="#555">INTEGER</text>
+<text x="706" y="417" font-weight="bold" font-size="10"></text>
+<text x="752" y="417">quantity</text>
+<text x="924" y="417" text-anchor="end" fill="#555">FLOAT</text>
+<text x="706" y="439" font-weight="bold" font-size="10"></text>
+<text x="752" y="439">priceperkg</text>
+<text x="924" y="439" text-anchor="end" fill="#555">FLOAT</text>
+<rect x="1030" y="330" width="230" height="116" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="1030" y="330" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="1145.0" y="349" text-anchor="middle" font-weight="bold" font-size="13">products</text>
+<text x="1036" y="373" font-weight="bold" font-size="10">PK</text>
+<text x="1082" y="373">id</text>
+<text x="1254" y="373" text-anchor="end" fill="#555">INTEGER</text>
+<text x="1036" y="395" font-weight="bold" font-size="10">U</text>
+<text x="1082" y="395">productname</text>
+<text x="1254" y="395" text-anchor="end" fill="#555">VARCHAR(80)</text>
+<text x="1036" y="417" font-weight="bold" font-size="10"></text>
+<text x="1082" y="417">price</text>
+<text x="1254" y="417" text-anchor="end" fill="#555">FLOAT</text>
+<text x="1036" y="439" font-weight="bold" font-size="10">FK</text>
+<text x="1082" y="439">category_id</text>
+<text x="1254" y="439" text-anchor="end" fill="#555">INTEGER</text>
+<rect x="1360" y="330" width="230" height="72" fill="white" stroke="#333" stroke-width="1.5"/>
+<rect x="1360" y="330" width="230" height="28" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+<text x="1475.0" y="349" text-anchor="middle" font-weight="bold" font-size="13">categories</text>
+<text x="1366" y="373" font-weight="bold" font-size="10">PK</text>
+<text x="1412" y="373">id</text>
+<text x="1584" y="373" text-anchor="end" fill="#555">INTEGER</text>
+<text x="1366" y="395" font-weight="bold" font-size="10">U</text>
+<text x="1412" y="395">categoryname</text>
+<text x="1584" y="395" text-anchor="end" fill="#555">VARCHAR(40)</text>
+</svg>
