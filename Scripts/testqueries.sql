@@ -98,9 +98,11 @@ WHERE stock < minstock;
 -- samma artikelnummer två gånger (UNIQUE constraint failed)
 -- INSERT INTO ingredients(itemnumber, ingredientname, priceperkg, supplier_id) VALUES('R100', 'Mjöl igen', 10, 1);
 
--- så här tar man bort en leverantör på rätt sätt, raderna som pekar på den först
--- DELETE FROM purchaseitems WHERE purchase_id IN (SELECT id FROM purchases WHERE supplier_id = 3);
--- DELETE FROM purchases WHERE supplier_id = 3;
--- DELETE FROM recipes WHERE ingredient_id IN (SELECT id FROM ingredients WHERE supplier_id = 3);
+-- så här tar man bort leverantör 3 (Sockerbolaget) på rätt sätt, raderna som pekar på den först
+-- DELETE FROM purchaseitems WHERE purchase_id = 3;
+-- DELETE FROM purchases WHERE id = 3;
+-- DELETE FROM recipes WHERE ingredient_id = 6;
+-- DELETE FROM recipes WHERE ingredient_id = 7;
+-- DELETE FROM recipes WHERE ingredient_id = 8;
 -- DELETE FROM ingredients WHERE supplier_id = 3;
 -- DELETE FROM suppliers WHERE id = 3;
