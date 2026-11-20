@@ -83,3 +83,24 @@ SELECT
 FROM ingredients INNER JOIN suppliers
     ON ingredients.supplier_id = suppliers.id
 WHERE stock < minstock;
+
+-- testar reglerna, de här ska ge fel. markera en rad i taget och kör den
+
+-- leverantör 99 finns inte (FOREIGN KEY constraint failed)
+-- INSERT INTO ingredients(itemnumber, ingredientname, priceperkg, supplier_id) VALUES('R999', 'Test', 10, 99);
+
+-- vetemjöl finns redan i receptet för limpa (UNIQUE constraint failed)
+-- INSERT INTO recipes(product_id, ingredient_id, amount) VALUES(1, 1, 0.5);
+
+-- går inte att ta bort en leverantör som har råvaror (FOREIGN KEY constraint failed)
+-- DELETE FROM suppliers WHERE id = 1;
+
+-- samma artikelnummer två gånger (UNIQUE constraint failed)
+-- INSERT INTO ingredients(itemnumber, ingredientname, priceperkg, supplier_id) VALUES('R100', 'Mjöl igen', 10, 1);
+
+-- så här tar man bort en leverantör på rätt sätt, raderna som pekar på den först
+-- DELETE FROM purchaseitems WHERE purchase_id IN (SELECT id FROM purchases WHERE supplier_id = 3);
+-- DELETE FROM purchases WHERE supplier_id = 3;
+-- DELETE FROM recipes WHERE ingredient_id IN (SELECT id FROM ingredients WHERE supplier_id = 3);
+-- DELETE FROM ingredients WHERE supplier_id = 3;
+-- DELETE FROM suppliers WHERE id = 3;
